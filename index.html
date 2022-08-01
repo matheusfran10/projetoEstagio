@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/stylesCard.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/stylecard.css">
+    <!-- FOTNS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- JS -->
+    <script src="https://kit.fontawesome.com/55e31f83ad.js" crossorigin="anonymous"></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/DOM.js" defer></script>
+    <script src="./js/validations.js" defer></script>
+    <script src="./js/custom.js"></script>
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+
+    <main class="container">
+        <section class="form-container">
+            <div class="texts">
+                <h1><img src="./img/Logog.PNG" class="img" alt="Logo"> Its Pay </h1>
+            </div>
+
+
+            <form>
+                <div class="subscribe-message">
+                    <strong>Informe os dados do cartão: </strongthe>
+                </div>
+                <div class="container-form-group">
+                    <div class="form-group">
+                        <label class="estilo">Nome Completo: </label>
+                        <input type="text" class="error-actived" name="form_card_usuario" id="nameUser"
+                            placeholder="Nome Completo" maxlength="30" required onkeyup="carregarDados()"
+                            autocomplete="off">
+
+                        <div class="infos-error">
+                            <span class="msg-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="estilo">CPF: </label>
+                        <input name="cpf " class="error-actived" type="text" id="cpf" class="input" maxlength="14"
+                            required onkeyup="carregarDados()" onkeydown="mascara_cpf()" placeholder="CPF"
+                            autocomplete="off">
+                        <div class="infos-error">
+                            <span class="msg-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="estilo">Número do Cartão: </label>
+                        <input type="text" maxlength="22" id="numberCard" placeholder="Número do Cartão"
+                            class="error-actived" name="numerCard" required onkeyup="carregarDados()"
+                            onkeydown="mascara_cartao()">
+                        <div class="infos-error">
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                            <i class="fa-brands fa-cc-visa"></i>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="estilo">Data de Validade: </label>
+                        <input type="month" id="dateValidity" class="error-actived" name="dateValidity" required>
+                        <div class="infos-error">
+                            <span class="msg-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="estilo">CVV: </label>
+                        <input onkeyup="carregarDados()" oninput="javascript:
+                    if (this.value.length >
+                    this.maxLength)
+                    this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="3" id="numberCVV"
+                            placeholder="XXX" name="numberCVV" class="error-actived" required>
+                        <div class="infos-error">
+                            <span class="msg-error"></span>
+                        </div>
+                    </div>
+                </div>
+                <button id="btn-submit" class="button">Cadastra-se</button>
+
+                <span class="term-message">
+                    Ao clicar no botão, você concorda com nossos
+                    <a href="#">Termos e serviços</a>
+                </span>
+
+
+            </form>
+
+        </section>
+
+
+        <section class="credit-card">
+            <div class="card">
+                <div class="face front absolute">
+
+                    <p id="owner" class="absolute"> ITS PAY</p>
+
+                    <input class="input-card" id="nameCard" value="">
+
+                    <input class="input-card" id="nuemroCpf" value="">
+
+                    <input class="input-card" id="numeroCartao" value="">
+
+                </div>
+
+
+                <div class="face back absolute">
+                    <div id="graybar" class="absolute">
+
+
+                    </div>
+                    <div id="card-info" class="absolute">
+
+                        <div class="flex">
+                            <span>CVV</span>
+                            <input maxlength="3" class="input-cvv" id="numeroCVV" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+</body>
+
+
+
+</html>

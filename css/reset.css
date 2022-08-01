@@ -1,0 +1,64 @@
+:root {
+    --skyBlue: #87CEEB;
+    --dodgerBlue: #1E90FF;
+    --cyan: #00FFFF;
+    --royalBlue: #4169E1;
+    --softBlue: #8bacda;
+    --cyan: #00fff7;
+    --mainBg: #0d192b;
+    --cardBg: #6495ED;
+    --line: #2f415b;
+    --white: #fff;
+    --red: #FF0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('../img/bg-intro-desktop.png');
+    background-color: var(--skyBlue);
+}
+
+input {
+    width: 50%;
+    height: 45px;
+    outline: 0;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.16s ease-in;
+
+}
+
+
+
+button {
+    width: 50%;
+    height: 45px;
+    outline: 0;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.16s ease-in;
+
+}
+
+input {
+    padding: 0 24px;
+
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
